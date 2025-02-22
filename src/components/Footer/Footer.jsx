@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout, Row, Col, Typography, Space } from "antd";
+import './styles.css';
 
 const { Title, Text, Link } = Typography;
 
@@ -46,8 +47,8 @@ const Footer = () => {
           <Title level={4}>Contact Us</Title>
           <Space direction="vertical">
             <Text>Address: 123 Main Street, Anytown, CA 12345</Text>
-            <Text>Tel: +(123) 456-7890</Text>
-            <Text>Mail: bywayedu@webkul.in</Text>
+            <Text>Tel: +(84) 48 188 712</Text>
+            <Text>Mail: 21130338@st.hcmuaf.edu.vn</Text>
           </Space>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/cff7af8338eb559aba04bb235c3a8be5d06ded865366cc152de8cd7463a9a443"

@@ -1,16 +1,12 @@
 import './App.css'
-import {Route, Routes, BrowserRouter} from 'react-router-dom';
-import HomeScreen from './view/client/pages/home';
+// import {Route, Routes, BrowserRouter} from 'react-router-dom';
+import AllRouter from './components/AllRouter/AllRouter';
 
 function App() {
   return (
-    <BrowserRouter>
-      {/* <AuthProvider> */}
-        <Routes>
-          <Route element={<HomeScreen/>} path='/'/>
-        </Routes>
-      {/* </AuthProvider> */}
-    </BrowserRouter>
+    <>
+      <AllRouter/>
+    </>
   )
 }
 
