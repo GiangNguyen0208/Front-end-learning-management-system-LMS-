@@ -1,0 +1,91 @@
+.site-header {
+    background: white;
+    padding-top: 12px;
+    padding-bottom: 0;
+    height: auto;
+    line-height: 1.5;
+  }
+  
+  .header-container {
+    max-width: 1614px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 31px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #334155;
+    line-height: 1.2;
+  }
+  
+  .nav-item {
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+    white-space: nowrap;
+  }
+  
+  .header-search {
+    border-radius: 8px;
+    border-color: #334155;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .search-icon {
+    color: #334155;
+  }
+  
+  .user-icon {
+    font-size: 24px;
+    color: #334155;
+  }
+  
+  .login-button {
+    font-size: 14px;
+    font-weight: 500;
+    border-color: #334155;
+    color: #334155;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .signup-button {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #334155;
+    border-color: #334155;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .header-divider {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-item {
+      margin: 8px 0;
+    }
+  }
+  
