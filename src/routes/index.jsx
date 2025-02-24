@@ -1,11 +1,14 @@
 import PrivateRouter from "../components/PrivateRouter/PrivateRouter";
 import HomeLayout from "../view/client/layout/default";
+import Categories from "../view/client/pages/categories/CourseList";
+import Checkout from "../view/client/pages/checkout/Checkout";
+import CourseHeader from "../view/client/pages/course";
 import Error404 from "../view/client/pages/error/Error404";
 import HomeScreen from "../view/client/pages/home";
 import InfoUser from "../view/client/pages/info/InfoUser";
 import Login from "../view/client/pages/login/Login";
 import Signup from "../view/client/pages/register/SignUp";
-import Register from "../view/client/pages/register/SignUp";
+import ShoppingCart from "../view/client/pages/shopping-cart/ShoppingCart";
 
 
 export const routes = [
@@ -24,6 +27,22 @@ export const routes = [
             {
                 path: "sign-up",
                 element: <Signup/>
+            },
+            {
+                path: "categories",
+                element: <Categories/>
+            },
+            {
+                path: "course",
+                element: <CourseHeader/>
+            },
+            {
+                path: "shopping-cart",
+                element: <ShoppingCart/>
+            },
+            {
+                path: "check-out",
+                element: <Checkout/>
             },
             {
                 element: <PrivateRouter />,

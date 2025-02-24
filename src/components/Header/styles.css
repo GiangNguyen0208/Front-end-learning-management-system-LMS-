@@ -119,6 +119,19 @@
   width: 100%;
 }
 
+/* Icon Cart */
+.cart-icon {
+  font-size: 22px;
+  color: #1e293b;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.cart-icon:hover {
+  color: #1677ff;
+}
+
 /* Responsive cho mobile */
 @media (max-width: 768px) {
   .header-container {

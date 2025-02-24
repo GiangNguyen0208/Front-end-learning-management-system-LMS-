@@ -1,107 +1,49 @@
 import React from "react";
-import { Row, Col, Card, Typography, Rate, Button } from "antd";
-import { ClockCircleOutlined } from "@ant-design/icons";
-import './styles.css';
-
+import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
+import { Card, Typography, Rate, Space } from "antd";
 
 const { Title, Text } = Typography;
-const { Meta } = Card;
 
-const CourseCard = ({
-  image,
-  title,
-  instructor,
-  rating,
-  ratingCount,
-  duration,
-  level,
-  price,
-}) => (
-  <Card className="course-card" cover={<img alt={title} src={image} />}>
-    <Meta
-      title={title}
-      description={
-        <div className="course-details">
-          <Text className="instructor">{instructor}</Text>
-          <div className="rating-container">
-            <Rate disabled defaultValue={rating} />
-            <Text className="rating-count">({ratingCount} Ratings)</Text>
-          </div>
-          <Text className="duration">
-            <ClockCircleOutlined /> {duration} • {level}
-          </Text>
-          <Text className="price">{price}</Text>
-        </div>
-      }
-    />
-  </Card>
-);
+const CourseCard = ({ image, title, instructor, rating, ratingCount, details, price }) => {
+  const navigate = useNavigate();
 
-const Courses = () => {
-  const courses = [
-    {
-      image:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/9afc139762e1139de728f99c3c87a545ae0f11dd6ad6fbee618809cbbdbab3b1",
-      title: "Spring Boot for Beginner's",
-      instructor: "Giang Trương Nguyễn",
-      rating: 4.5,
-      ratingCount: "1200",
-      duration: "22 Total Hours • 155 Lectures",
-      level: "Beginner",
-      price: "2.300.000 VNĐ",
-    },
-    {
-        image:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/9afc139762e1139de728f99c3c87a545ae0f11dd6ad6fbee618809cbbdbab3b1",
-        title: "Spring Boot for Beginner's",
-        instructor: "Giang Trương Nguyễn",
-        rating: 4.5,
-        ratingCount: "1200",
-        duration: "22 Total Hours • 155 Lectures",
-        level: "Beginner",
-        price: "2.300.000 VNĐ",
-      },
-      {
-        image:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/9afc139762e1139de728f99c3c87a545ae0f11dd6ad6fbee618809cbbdbab3b1",
-        title: "Spring Boot for Beginner's",
-        instructor: "Giang Trương Nguyễn",
-        rating: 4.5,
-        ratingCount: "1200",
-        duration: "22 Total Hours • 155 Lectures",
-        level: "Beginner",
-        price: "2.300.000 VNĐ",
-      },
-      {
-        image:
-          "https://cdn.builder.io/api/v1/image/assets/TEMP/9afc139762e1139de728f99c3c87a545ae0f11dd6ad6fbee618809cbbdbab3b1",
-        title: "Spring Boot for Beginner's",
-        instructor: "Giang Trương Nguyễn",
-        rating: 4.5,
-        ratingCount: "1200",
-        duration: "22 Total Hours • 155 Lectures",
-        level: "Beginner",
-        price: "2.300.000 VNĐ",
-      },
-    // Add more courses with similar structure
-  ];
+  const handleNavigate = () => {
+    navigate("/course"); // Điều hướng đến trang khóa học
+  };
 
   return (
-    <div className="courses-section">
-      <div className="section-header">
-        <Title level={2}>Top Khóa học</Title>
-        <Button type="link">See All</Button>
-      </div>
+    <Card
+      hoverable
+      onClick={handleNavigate}
+      cover={<img alt={title} src={image} style={{ borderRadius: "8px 8px 0 0" }} />}
+      className="course-card"
+    >
+      <Space direction="vertical" size={8} style={{ width: "100%" }}>
+        <Title level={4}>{title}</Title>
+        <Text type="secondary">By {instructor}</Text>
 
-      <Row gutter={[32, 32]}>
-        {courses.map((course, index) => (
-          <Col xs={24} sm={12} lg={6} key={index}>
-            <CourseCard {...course} />
-          </Col>
-        ))}
-      </Row>
-    </div>
+        <Space>
+          <Rate disabled defaultValue={rating} />
+          <Text type="secondary">({ratingCount} Ratings)</Text>
+        </Space>
+
+        <Text type="secondary">{details}</Text>
+        <Title level={4}>${price}</Title>
+      </Space>
+    </Card>
   );
 };
 
-export default Courses;
+// Định nghĩa kiểu dữ liệu của props bằng PropTypes
+CourseCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  instructor: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  ratingCount: PropTypes.number.isRequired,
+  details: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+};
+
+export default CourseCard;

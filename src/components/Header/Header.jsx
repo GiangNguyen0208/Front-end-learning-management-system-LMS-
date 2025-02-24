@@ -1,16 +1,17 @@
 import React from 'react';
 import { Layout, Row, Col, Space } from 'antd';
+import { ShoppingCartOutlined } from '@ant-design/icons';  // Import icon giỏ hàng
 import { HeaderSearch } from './HeaderSearch';
 import { HeaderAuth } from './HeaderAuth';
-import './styles.css';
 import { useNavigate } from 'react-router-dom';
+import './styles.css';
 
 const Header = () => {
   const navigate = useNavigate();
 
-  const handleLogoClick = () => {
-    navigate('/');
-  };
+  const handleLogoClick = () => navigate('/');
+  const handleCategory = () => navigate('categories');
+  const handleCartClick = () => navigate('shopping-cart');
 
   return (
     <Layout.Header className="site-header">
@@ -28,7 +29,7 @@ const Header = () => {
           </Space>
         </Col>
 
-        <Col className="nav-item">
+        <Col className="nav-item" onClick={handleCategory}>
           <span>Danh mục</span>
         </Col>
 
@@ -38,6 +39,11 @@ const Header = () => {
 
         <Col className="nav-item">
           <span>Tham gia giảng dạy</span>
+        </Col>
+
+        {/* Giỏ hàng */}
+        <Col className="cart-icon" onClick={handleCartClick}>
+          <ShoppingCartOutlined style={{ fontSize: 22, cursor: 'pointer' }} />
         </Col>
 
         <Col>

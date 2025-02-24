@@ -8,10 +8,18 @@ export const HeaderAuth = () => {
   const handleResgister = () => {
     navigate("sign-up")
   }
+  const handleLogin = () => {
+    navigate("login")
+  }
   return (
     <Space size={16}>
       {/* <UserOutlined className="user-icon" /> */}
-      <Button className="login-button">Đăng nhập</Button>
+      <Button 
+        className="login-button"
+        onClick={handleLogin}
+        >
+        Đăng nhập
+      </Button>
       <Button 
         type="primary" 
         className="signup-button"
