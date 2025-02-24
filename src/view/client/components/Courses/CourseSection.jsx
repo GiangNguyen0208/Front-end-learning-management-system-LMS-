@@ -8,7 +8,7 @@ const CourseSection = () => {
   const courseSection = [
     {
       id: 1,
-      image:
+      imageUrl:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/4b8bbe735beffd3cbc04eb82bff6a96bb7063923171d2b2385da596c9aef29cc",
       title: "Beginner's Guide to Design",
       instructor: "Ronald Richards",
@@ -19,7 +19,7 @@ const CourseSection = () => {
     },
     {
         id: 1,
-        image:
+        imageUrl:
           "https://cdn.builder.io/api/v1/image/assets/TEMP/4b8bbe735beffd3cbc04eb82bff6a96bb7063923171d2b2385da596c9aef29cc",
         title: "Beginner's Guide to Design",
         instructor: "Ronald Richards",
@@ -30,7 +30,7 @@ const CourseSection = () => {
       },
       {
         id: 1,
-        image:
+        imageUrl:
           "https://cdn.builder.io/api/v1/image/assets/TEMP/4b8bbe735beffd3cbc04eb82bff6a96bb7063923171d2b2385da596c9aef29cc",
         title: "Beginner's Guide to Design",
         instructor: "Ronald Richards",
@@ -41,7 +41,7 @@ const CourseSection = () => {
       },
       {
         id: 1,
-        image:
+        imageUrl:
           "https://cdn.builder.io/api/v1/image/assets/TEMP/4b8bbe735beffd3cbc04eb82bff6a96bb7063923171d2b2385da596c9aef29cc",
         title: "Beginner's Guide to Design",
         instructor: "Ronald Richards",

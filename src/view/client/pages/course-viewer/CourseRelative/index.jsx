@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import { Row, Col, Typography } from "antd";
 import NavigationButtons from "./NavigationButtons";
-import { testimonials } from "../js/constantTestimonial";
+import { datalist } from "./js/data";
 import { scrollContainer } from "../../../../../utils/helper/scrollContainerHelper";
-import "./../css/testimonial.css";
-import TestimonialCard from "./TestimonialCard";
+import "./css/testimonial.css";
+import CourseCard from "../../../components/Courses/CourseCard";
 
 const { Title } = Typography;
 
-const TestimonialsSection = ({title}) => {
+const CourseRelative = ({title}) => {
   const containerRef = useRef(null);
 
   const handleNavigation = (direction) => {
@@ -36,10 +36,10 @@ const TestimonialsSection = ({title}) => {
       </Row>
 
       <div className="testimonials-container" ref={containerRef}>
-        <Row gutter={16} wrap={false}>
-          {testimonials.map((testimonial) => (
-            <Col key={testimonial.id}>
-              <TestimonialCard title={title} {...testimonial} />
+        <Row gutter={16} wrap={false} style={{ display: "flex", width: "1296px" }}>
+          {datalist.map((data) => (
+            <Col key={data.id} style={{ flex: "0 0 432px" }}>
+              <CourseCard {...data} />
             </Col>
           ))}
         </Row>
@@ -48,4 +48,4 @@ const TestimonialsSection = ({title}) => {
   );
 };
 
-export default TestimonialsSection;
+export default CourseRelative;

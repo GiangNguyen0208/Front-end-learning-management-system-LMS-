@@ -20,38 +20,47 @@ export const routes = [
         children: [
             {
                 path: "/",
+                title: "Home",
                 element: <HomeScreen/>
             },
             {
                 path: "login",
+                title: "Đăng nhập",
                 element: <Login/>
             },
             {
                 path: "sign-up",
+                title: "Đăng ký",
                 element: <Signup/>
             },
             {
                 path: "categories",
+                title: "Danh mục",
                 element: <Categories/>
             },
             {
                 path: "course",
+                title: "Khóa học",
                 element: <CourseHeader/>
             },
             {
                 path: "shopping-cart",
+                title: "Giỏ hàng",
                 element: <ShoppingCart/>,
             },
             {
                 path: "check-out",
+                title: "Thanh toán",
                 element: <Checkout/>
             },
             {
                 path: "order-complete",
+                title: "Thanh toán thành công",
                 element: <OrderComplete/>
             },
             {
                 path: "course-viewer",
+                title: "Xem khóa học",
                 element: <CourseViewer/>
             },
             {
@@ -59,6 +68,7 @@ export const routes = [
                 children: [
                     {
                         path: "info-user",
+                        title: "Thông tin người dùng",
                         element: <InfoUser />
                     }
                 ]
@@ -67,6 +77,7 @@ export const routes = [
     },
     {
         path: "*",
+        title: "Not Found 404",
         element: <Error404 />
     }
 ];
