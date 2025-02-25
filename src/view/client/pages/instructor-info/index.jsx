@@ -1,11 +1,10 @@
 import React from "react";
 import { Row, Col } from "antd";
-import MentorHeader from "./MentorHeader";
-import MentorDetails from "./MentorDetails";
-import MentorSidebar from "./MentorSidebar";
+import MentorHeader from "./info/MentorHeader";
+import MentorDetails from "./info/MentorDetails";
+import MentorSidebar from "./info/MentorSidebar";
 import "./styles.css";
 import CourseRelative from "../course-viewer/CourseRelative";
-import CourseReviews from "../course/CourseDetail/CourseReviews";
 import LearnerReviews from "./reviews/LearnerReviews";
 
 function InstructorInfo() {
