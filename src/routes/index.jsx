@@ -7,6 +7,7 @@ import CourseViewer from "../view/client/pages/course-viewer/CourseViewer";
 import Error404 from "../view/client/pages/error/Error404";
 import HomeScreen from "../view/client/pages/home";
 import InfoUser from "../view/client/pages/info/InfoUser";
+import InstructorInfo from "../view/client/pages/instructor-info";
 import Login from "../view/client/pages/login/Login";
 import OrderComplete from "../view/client/pages/order-complete/OrderComplete";
 import Signup from "../view/client/pages/register/SignUp";
@@ -62,6 +63,11 @@ export const routes = [
                 path: "course-viewer",
                 title: "Xem khóa học",
                 element: <CourseViewer/>
+            },
+            {
+                path: "instructor-info",
+                title: "Thông tin giảng viên",
+                element: <InstructorInfo />
             },
             {
                 element: <PrivateRouter />,
