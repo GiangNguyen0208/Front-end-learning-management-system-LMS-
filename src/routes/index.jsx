@@ -6,10 +6,10 @@ import CourseHeader from "../view/client/pages/course";
 import CourseViewer from "../view/client/pages/course-viewer/CourseViewer";
 import Error404 from "../view/client/pages/error/Error404";
 import HomeScreen from "../view/client/pages/home";
-import InfoUser from "../view/client/pages/info/InfoUser";
 import InstructorInfo from "../view/client/pages/instructor-info";
 import Login from "../view/client/pages/login/Login";
 import OrderComplete from "../view/client/pages/order-complete/OrderComplete";
+import Infomation from "../view/client/pages/profile";
 import Signup from "../view/client/pages/register/SignUp";
 import ShoppingCart from "../view/client/pages/shopping-cart/ShoppingCart";
 
@@ -70,15 +70,20 @@ export const routes = [
                 element: <InstructorInfo />
             },
             {
-                element: <PrivateRouter />,
-                children: [
-                    {
-                        path: "info-user",
-                        title: "Thông tin người dùng",
-                        element: <InfoUser />
-                    }
-                ]
-            }
+                path: "infomation",
+                title: "Thông tin người dùng",
+                element: <Infomation />,
+            },
+            // {
+            //     element: <PrivateRouter />,
+            //     children: [
+            //         {
+            //             path: "info-user",
+            //             title: "Thông tin người dùng",
+            //             element: <In />
+            //         }
+            //     ]
+            // }
         ]
     },
     {
