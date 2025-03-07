@@ -4,11 +4,12 @@ import ProfileSidebar from "./SideBar/ProfileSidebar";
 import ProfileForm from "./Profile/Form/ProfileForm";
 import ImageUpload from "./Profile/ImageUpload/ImageUpload";
 import SocialLinks from "./Profile/SocialLinks/SocialLinks";
-import CourseSearch from "./CourseSearch/CourseSearch";
+import SearchFilter from "./SearchFilter/CourseSearch";
 import "./styles.css";
 import CourseGrid from "../categories/CourseGrid";
-import LearnerReviews from "../instructor-info/reviews/LearnerReviews";
 import ReviewList from "./Reviews/ReviewList";
+import InstructorCardGrid from "./Instructor/InstructorCardGrid";
+import MessageList from "./Message/MessageList";
 
 const { Content } = Layout;
 
@@ -85,36 +86,44 @@ function Infomation() {
           case "profile":
             return (
                 <>
-                    <ProfileForm />
-                    <ImageUpload />
-                    <SocialLinks />
+                  <ProfileForm />
+                  <ImageUpload />
+                  <SocialLinks />
                 </>
             );
           case "courses":
             return (
                 <>
-                    <CourseSearch title="Courses" />
-                    <CourseGrid courses={courses} />
+                  <SearchFilter title="Courses" />
+                  <CourseGrid courses={courses} />
                 </>
             );
           case "teachers":
             return (
                 <>
-                    <CourseSearch title="Instructors" />
+                  <SearchFilter title="Instructors" />
+                  <InstructorCardGrid />
                 </>
             );
           case "reviews":
             return (
                 <>
-                    <ReviewList />
+                  <ReviewList />
                 </>
             );
+          case "message":
+            return (
+              <>
+                  <SearchFilter title="Message" />
+                  <MessageList />
+              </>
+            )
           default:
             return  (
                 <>
-                    <ProfileForm />
-                    <ImageUpload />
-                    <SocialLinks />
+                  <ProfileForm />
+                  <ImageUpload />
+                  <SocialLinks />
                 </>
             );
         }

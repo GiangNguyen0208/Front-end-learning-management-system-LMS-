@@ -70,7 +70,7 @@ export const routes = [
                 element: <InstructorInfo />
             },
             {
-                path: "infomation",
+                path: "info-user",
                 title: "Thông tin người dùng",
                 element: <Infomation />,
             },

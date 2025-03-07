@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { Input, Button, Space, Typography } from "antd";
 import {
@@ -10,7 +9,7 @@ import "./styles.css";
 
 const { Text } = Typography;
 
-const CourseSearch = ({title}) => {
+const SearchFilter = ({title}) => {
   return (
     <div className="course-search-container">
       <div className="course-count">
@@ -44,4 +43,4 @@ const CourseSearch = ({title}) => {
   );
 };
 
-export default CourseSearch;
+export default SearchFilter;
